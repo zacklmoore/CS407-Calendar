@@ -1,5 +1,5 @@
 //
-//  Event.swift
+//  CalEvent.swift
 //  zackcal
 //
 //  Created by Zackary Moore on 10/21/15.
@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+class CalEvent {
+    
+}
