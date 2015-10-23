@@ -27,6 +27,14 @@ class EditViewController: UIViewController, UITableViewDelegate, UITableViewData
         if(eventList[todayString] != nil)
         {
             todayEvents = eventList[todayString]!;
+            todayEvents.sort({ (e1: CalendarEvent, e2: CalendarEvent) -> Bool in
+                
+                if e1.Date.compare(e2.Date) == NSComparisonResult.OrderedAscending
+                {
+                    return true;
+                }
+                return false;
+            });
         }
         else
         {
@@ -43,6 +51,14 @@ class EditViewController: UIViewController, UITableViewDelegate, UITableViewData
         if(eventList[todayString] != nil)
         {
             todayEvents = eventList[todayString]!;
+            todayEvents.sort({ (e1: CalendarEvent, e2: CalendarEvent) -> Bool in
+                
+                if e1.Date.compare(e2.Date) == NSComparisonResult.OrderedAscending
+                {
+                    return true;
+                }
+                return false;
+            });
         }
         else
         {
@@ -103,6 +119,14 @@ class EditViewController: UIViewController, UITableViewDelegate, UITableViewData
         if(eventList[todayString] != nil)
         {
             todayEvents = eventList[todayString]!;
+            todayEvents.sort({ (e1: CalendarEvent, e2: CalendarEvent) -> Bool in
+                
+                if e1.Date.compare(e2.Date) == NSComparisonResult.OrderedAscending
+                {
+                    return true;
+                }
+                return false;
+            });
         }
         else
         {
@@ -111,9 +135,6 @@ class EditViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         tableView.reloadData()
     }
-    
-    
-    
     
 }
 

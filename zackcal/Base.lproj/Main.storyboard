@@ -96,23 +96,14 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qWL-SQ-1Lk" id="Ywc-uo-eax">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7PN-OJ-tHe">
-                                                    <rect key="frame" x="507" y="7" width="30" height="30"/>
-                                                    <state key="normal" title="Edit">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="editButtonPressed:" destination="qWL-SQ-1Lk" eventType="touchUpInside" id="ncW-W2-pLE"/>
-                                                    </connections>
-                                                </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="12:00AM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DpH-dY-X1O">
-                                                    <rect key="frame" x="430" y="11" width="69" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%Name%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7W-z4-ZWw">
+                                                    <rect key="frame" x="13" y="11" width="80" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%Name%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7W-z4-ZWw">
-                                                    <rect key="frame" x="13" y="11" width="80" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00AM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DpH-dY-X1O">
+                                                    <rect key="frame" x="488" y="11" width="69" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -120,11 +111,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Y7W-z4-ZWw" firstAttribute="leading" secondItem="Ywc-uo-eax" secondAttribute="leadingMargin" constant="5" id="1e3-Rx-iYP"/>
-                                                <constraint firstAttribute="centerY" secondItem="7PN-OJ-tHe" secondAttribute="centerY" id="7cO-9y-wmi"/>
-                                                <constraint firstItem="7PN-OJ-tHe" firstAttribute="leading" secondItem="DpH-dY-X1O" secondAttribute="trailing" constant="8" id="Hai-Ji-m5D"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="7PN-OJ-tHe" secondAttribute="trailing" constant="7" id="M98-ib-41X"/>
                                                 <constraint firstAttribute="centerY" secondItem="DpH-dY-X1O" secondAttribute="centerY" id="WKl-ko-L3w"/>
                                                 <constraint firstAttribute="centerY" secondItem="Y7W-z4-ZWw" secondAttribute="centerY" id="ho0-SM-yiE"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="DpH-dY-X1O" secondAttribute="trailing" constant="3" id="pHu-7l-trR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

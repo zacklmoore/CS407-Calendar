@@ -22,9 +22,22 @@ class EventTableViewController: UITableViewController {
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let todayString = dateFormatter.stringFromDate(todayDate);
         
-        generateSampleEvents(todayString);
-        
-        todayEvents = eventList[todayString]!;
+        if(eventList[todayString] != nil)
+        {
+            todayEvents = eventList[todayString]!;
+            todayEvents.sort({ (e1: CalendarEvent, e2: CalendarEvent) -> Bool in
+                
+                if e1.Date.compare(e2.Date) == NSComparisonResult.OrderedAscending
+                {
+                    return true;
+                }
+                return false;
+            });
+        }
+        else
+        {
+            todayEvents = [CalendarEvent]();
+        }
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -53,20 +66,22 @@ class EventTableViewController: UITableViewController {
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let todayString = dateFormatter.stringFromDate(todayDate);
 
-        todayEvents = eventList[todayString]!;
+        if(eventList[todayString] != nil)
+        {
+            todayEvents = eventList[todayString]!;
+            todayEvents.sort({ (e1: CalendarEvent, e2: CalendarEvent) -> Bool in
+                
+                if e1.Date.compare(e2.Date) == NSComparisonResult.OrderedAscending
+                {
+                    return true;
+                }
+                return false;
+            });
+        }
+        else
+        {
+            todayEvents = [CalendarEvent]();
+        }
         tableView.reloadData();
     }
-    
-    func generateSampleEvents(today:String) {
-        var event1 : CalendarEvent = CalendarEvent();
-        event1.Title = "Test";
-        event1.Date = NSDate();
-        var event2 : CalendarEvent = CalendarEvent();
-        event2.Title = "Test 2";
-        event2.Date = NSDate();
-        eventList[today] = [CalendarEvent]();
-        eventList[today]!.append(event1);
-        eventList[today]!.append(event2);
-    }
-
 }

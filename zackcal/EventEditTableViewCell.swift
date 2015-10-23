@@ -12,8 +12,4 @@ class EventEditTableViewCell: UITableViewCell {
 
     @IBOutlet weak var EventTitle: UILabel!
     @IBOutlet weak var EventTime: UILabel!
-    
-    @IBAction func editButtonPressed(sender: UIButton) {
-        print("Editing Event: " + EventTitle.text!);
-    }
 }
