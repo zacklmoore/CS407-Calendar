@@ -38,11 +38,23 @@ class EventTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("EventTableViewCell", forIndexPath: indexPath) as! EventTableViewCell
         let event = todayEvents[indexPath.row];
-        
-        cell.EventTime.text = "12:00am";
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "hh:mm a";
+        let timeString = dateFormatter.stringFromDate(event.Date);
+        cell.EventTime.text = timeString;
         cell.EventTitle.text = event.Title;
         
         return cell
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        let todayDate = NSDate()
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let todayString = dateFormatter.stringFromDate(todayDate);
+
+        todayEvents = eventList[todayString]!;
+        tableView.reloadData();
     }
     
     func generateSampleEvents(today:String) {

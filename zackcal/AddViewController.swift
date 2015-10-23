@@ -10,6 +10,11 @@ import UIKit
 
 class AddViewController: UIViewController {
     
+    //MARK: Properties
+    
+    @IBOutlet weak var EventDate: UIDatePicker!
+    @IBOutlet weak var EventTitle: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +25,25 @@ class AddViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func SaveButtonPressed(sender: UIButton) {
+        var newEvent = CalendarEvent();
+        newEvent.Title = EventTitle.text;
+        newEvent.Date = EventDate.date;
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let newDateString = dateFormatter.stringFromDate(newEvent.Date);
+        
+        if(eventList[newDateString] == nil)
+        {
+            eventList[newDateString] = [CalendarEvent]();
+        }
+        
+        eventList[newDateString]!.append(newEvent);
+        self.dismissViewControllerAnimated(false, completion: nil);
+    }
     
+    @IBAction func CancelButtonPressed(sender: UIButton) {
+        self.dismissViewControllerAnimated(false, completion: nil);
+    }
 }
 

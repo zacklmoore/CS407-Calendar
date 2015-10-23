@@ -13,12 +13,12 @@
 		14CEDB0B1BCB3B3F00F34400 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14CEDB0A1BCB3B3F00F34400 /* Images.xcassets */; };
 		14CEDB0E1BCB3B3F00F34400 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14CEDB0C1BCB3B3F00F34400 /* LaunchScreen.xib */; };
 		14CEDB1A1BCB3B3F00F34400 /* zackcalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CEDB191BCB3B3F00F34400 /* zackcalTests.swift */; };
-		14E243371BD88305004DA920 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E243361BD88305004DA920 /* TodayViewController.swift */; };
 		14E243391BD88321004DA920 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E243381BD88321004DA920 /* EditViewController.swift */; };
 		14E2433B1BD8832D004DA920 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2433A1BD8832D004DA920 /* AddViewController.swift */; };
 		14E2433F1BD88896004DA920 /* CalenarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2433E1BD88895004DA920 /* CalenarEvent.swift */; };
 		14E243411BD88E49004DA920 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E243401BD88E49004DA920 /* EventTableViewCell.swift */; };
 		14E243431BD93408004DA920 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E243421BD93408004DA920 /* EventTableViewController.swift */; };
+		14E243451BD9707A004DA920 /* EventEditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E243441BD9707A004DA920 /* EventEditTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,12 +42,12 @@
 		14CEDB131BCB3B3F00F34400 /* zackcalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zackcalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14CEDB181BCB3B3F00F34400 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14CEDB191BCB3B3F00F34400 /* zackcalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zackcalTests.swift; sourceTree = "<group>"; };
-		14E243361BD88305004DA920 /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		14E243381BD88321004DA920 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		14E2433A1BD8832D004DA920 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		14E2433E1BD88895004DA920 /* CalenarEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenarEvent.swift; sourceTree = "<group>"; };
 		14E243401BD88E49004DA920 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		14E243421BD93408004DA920 /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
+		14E243441BD9707A004DA920 /* EventEditTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEditTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +94,9 @@
 				14E2433A1BD8832D004DA920 /* AddViewController.swift */,
 				14E2433E1BD88895004DA920 /* CalenarEvent.swift */,
 				14E243401BD88E49004DA920 /* EventTableViewCell.swift */,
+				14E243441BD9707A004DA920 /* EventEditTableViewCell.swift */,
 				14E243421BD93408004DA920 /* EventTableViewController.swift */,
 				14E243381BD88321004DA920 /* EditViewController.swift */,
-				14E243361BD88305004DA920 /* TodayViewController.swift */,
 				14CEDB071BCB3B3F00F34400 /* Main.storyboard */,
 				14CEDB0A1BCB3B3F00F34400 /* Images.xcassets */,
 				14CEDB0C1BCB3B3F00F34400 /* LaunchScreen.xib */,
@@ -232,12 +232,12 @@
 			files = (
 				14E2433B1BD8832D004DA920 /* AddViewController.swift in Sources */,
 				14E2433F1BD88896004DA920 /* CalenarEvent.swift in Sources */,
+				14E243451BD9707A004DA920 /* EventEditTableViewCell.swift in Sources */,
 				14E243431BD93408004DA920 /* EventTableViewController.swift in Sources */,
 				14E243391BD88321004DA920 /* EditViewController.swift in Sources */,
 				14CEDB061BCB3B3F00F34400 /* ViewController.swift in Sources */,
 				14E243411BD88E49004DA920 /* EventTableViewCell.swift in Sources */,
 				14CEDB041BCB3B3F00F34400 /* AppDelegate.swift in Sources */,
-				14E243371BD88305004DA920 /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
